@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cricket Data</title>
+</head>
+<body>
+    <h1>Cricket Data</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Team</th>
+                <th>Opponent</th>
+                <th>Format</th>
+                <th>Ground</th>
+                <th>Year</th>
+                <th>Toss</th>
+                <th>Selection</th>
+                <th>Run Scored</th>
+                <th>Wicket Lost</th>
+                <th>Fours</th>
+                <th>Sixes</th>
+                <th>Extras</th>
+                <th>Run Rate</th>
+                <th>Avg Bat Strike Rate</th>
+                <th>Highest Score</th>
+                <th>Wicket Taken</th>
+                <th>Given Extras</th>
+                <th>Highest Individual Wicket</th>
+                <th>Player Of The Match</th>
+                <th>Result</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in rows %}
+            <tr>
+                {% for col in row %}
+                <td>{{ col }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
