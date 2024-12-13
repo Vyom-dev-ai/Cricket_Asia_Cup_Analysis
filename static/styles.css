@@ -1,0 +1,59 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container to center the content */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header styling */
+h1 {
+    text-align: center;
+    color: #2980b9;
+    margin-top: 30px;
+}
+
+/* Styling for the table */
+.cricket-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.cricket-table th, .cricket-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+.cricket-table th {
+    background-color: #2980b9;
+    color: white;
+}
+
+.cricket-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.cricket-table tr:hover {
+    background-color: #dcdcdc;
+}
+
+/* Styling for table data cells */
+.cricket-table td {
+    font-size: 14px;
+    color: #333;
+}
+
+/* Page margin adjustments */
+body {
+    margin: 0;
+    padding: 0;
+}

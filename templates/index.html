@@ -4,9 +4,104 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cricket Match Data</title>
+    <!-- Styling for the page -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-top: 50px;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        .info-box {
+            background-color: white;
+            padding: 30px;
+            margin-top: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #2980b9;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #34495e;
+        }
+        .dataset-info {
+            margin-top: 20px;
+        }
+        .dataset-info ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .dataset-info li {
+            margin-bottom: 10px;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #e74c3c;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 14px;
+            color: #7f8c8d;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to the Cricket Match Data</h1>
-    <p>This is where we'll display the cricket match data soon.</p>
+
+    <div class="container">
+        <h1>Welcome to the Cricket Match Data</h1>
+        <div class="info-box">
+            <h2>About the Project</h2>
+            <p>This project is part of the DAB111 course, focusing on the collection, processing, and presentation of cricket match data using Python, SQLite, and Flask.</p>
+            <p>It presents data about various Asia Cup cricket matches, analyzing the performance of teams, players, and their statistics.</p>
+        </div>
+
+        <div class="info-box">
+            <h2>About Dataset: Asia Cup CSV</h2>
+            <p>The dataset used in this project contains information about the Asia Cup cricket tournaments. Below are the key details about the data:</p>
+
+            <div class="dataset-info">
+                <ul>
+                    <li><span class="highlight">Team</span>: One team of the match</li>
+                    <li><span class="highlight">Opponent</span>: Other team of the match</li>
+                    <li><span class="highlight">Format</span>: Format of the tournament (ODI/T20I)</li>
+                    <li><span class="highlight">Ground</span>: Venue of the match</li>
+                    <li><span class="highlight">Year</span>: Tournament Year</li>
+                    <li><span class="highlight">Toss</span>: Win/Lose the toss</li>
+                    <li><span class="highlight">Selection</span>: Selection After winning/losing toss</li>
+                    <li><span class="highlight">Run Scored</span>: Total runs scored</li>
+                    <li><span class="highlight">Wicket Lost</span>: Total wickets lost</li>
+                    <li><span class="highlight">Fours</span>: Total fours scored</li>
+                    <li><span class="highlight">Sixes</span>: Total sixes scored</li>
+                    <li><span class="highlight">Extras</span>: Extras given by opponent team</li>
+                    <li><span class="highlight">Run Rate</span>: Batting innings run rate</li>
+                    <li><span class="highlight">Avg Bat Strike Rate</span>: Average batting strike rate</li>
+                    <li><span class="highlight">Highest Score</span>: Highest individual run scored</li>
+                    <li><span class="highlight">Wicket Taken</span>: Opponent team's total wickets taken</li>
+                    <li><span class="highlight">Given Extras</span>: Extras given to the opponent team</li>
+                    <li><span class="highlight">Highest Individual Wicket</span>: Highest individual wickets taken by the opponent team</li>
+                    <li><span class="highlight">Player Of The Match</span>: Player of the match</li>
+                    <li><span class="highlight">Result</span>: Winning/Losing the match</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Project by Pankaj , Vaibhav , Shivam , Nene and Joy</p>
+        </div>
+    </div>
+
 </body>
 </html>

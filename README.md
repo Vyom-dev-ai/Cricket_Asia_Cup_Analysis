@@ -40,10 +40,15 @@ Cricket dataset with the following variables:
 - templates/: HTML files for rendering the website.
 - static/: CSS and other static files for the website.
 
+## API Security
+- We have implemented proper security for the API keys used in this project to prevent unauthorized access to sensitive data. The API  keys are securely stored in a credentials.py file, which is not included in the GitHub repository. The file is excluded from version control by adding it to .gitignore. API keys are accessed in the application by importing the credentials module, ensuring that sensitive data is kept secure.
+
 ## Team Members:
 - **Pankaj Arvekar**: ID 0874516
 - **Vaibhav Gurav**: ID 0874462
 - **Shivam Rana**: ID  0875964
+- **Nene Tenabe** -ID 0853177
+- **Chinenye Onyedika** -ID 0847693
 
 
 

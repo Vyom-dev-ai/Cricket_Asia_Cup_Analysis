@@ -1,5 +1,12 @@
-from flask import Flask, render_template, g
+from flask import Flask, render_template, g, jsonify
+import requests # type: ignore
 import sqlite3
+import credentials
+
+# Example usage:
+print(credentials.cricket_api_key)
+print(credentials.database_password)
+
 
 app = Flask(__name__)
 
@@ -19,17 +26,32 @@ def close_connection(exception):
         db.close()
 
 # Create a route for the home page
+
+@app.route('/cricket')##secured version
+def cricket():
+    api_key = credentials.cricket_api_key
+    # Example endpoint for a cricket API
+    url = f"http://api.weatherapi.com/v1/current.json?key={api_key}&q=London"
+    
+    # Making a request to the Cricket API
+    response = requests.get(url)
+    cricket_data = response.json()
+    
+    # Return the weather data in a safe, user-friendly way
+    return jsonify(cricket_data)
+
+@app.route('/asiacup')##pulling credentials
+def asiacup():
+    api_key = credentials.cricket_api_key
+    return f"Your Weather API Key is: {api_key}"
+
 @app.route('/')
 def home():
     return render_template('index.html')
 
 @app.route('/about')
 def about():
-    return """
-    <h1>About</h1>
-    <p>Source: Your CSV File</p>
-    <p>Variables: Team, Opponent, Format, Ground, Year, Toss, Selection, Run Scored, Wicket Lost, Fours, Sixes, Extras, Run Rate, Avg Bat Strike Rate, Highest Score, Wicket Taken, Given Extras, Highest Individual Wicket, Player Of The Match, Result</p>
-    """
+    return render_template("about.html")
 
 @app.route('/data')
 def data():
